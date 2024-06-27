@@ -1,6 +1,4 @@
-
 import { StyleSheet } from "react-native";
-
 
 export const myStyle = StyleSheet.create({
   container: {
@@ -18,7 +16,7 @@ export const myStyle = StyleSheet.create({
     fontStyle: "italic",
   },
   image: {
-    width:300,
-    height: 300
-  }
+    width: 300,
+    height: 300,
+  },
 });
