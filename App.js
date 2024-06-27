@@ -1,4 +1,4 @@
-import { Text, View, Image, Button } from "react-native";
+import { Text, View, Image, Button, Alert} from "react-native";
 import { myStyle } from "./styles/myStyle";
 
 const logo = require("./assets/cat.jpg");
@@ -15,7 +15,11 @@ export default function App() {
         }}
         style={myStyle.image}
       ></Image>
-      <Button title="View Detail" color={'red'} onPress={ () => { console.log('If See this. Button is Work')}}></Button>
+      <Button title="View Detail" color={'red'} onPress={ () => { 
+        console.log('If See this. Button is Work')
+        Alert.alert('If See this. Button is Work')
+        }
+        }></Button>
     </View>
   );
 }
