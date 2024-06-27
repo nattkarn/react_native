@@ -6,9 +6,9 @@ export default function App() {
   
   return (
     <View style={myStyle.container}>
-      <Person/>
-      <Person/>
-      <Person/>
+      <Person name={'Nattkarn'} age={29} />
+      <Person name={'Nattkarn2'} age={29}/>
+      <Person name={'Nattkarn3'} age={29}/>
     </View>
   );
 }
