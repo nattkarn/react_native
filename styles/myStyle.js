@@ -3,9 +3,11 @@ import { StyleSheet } from "react-native";
 export const myStyle = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: "colum",
-    justifyContent: "center",
-    alignItems: "center",
+    backgroundColor:"pink",
+    marginTop:50,
+    marginBottom:50,
+    marginLeft: 10,
+    marginRight:10
   },
   header: {
     color: "red",
@@ -13,10 +15,13 @@ export const myStyle = StyleSheet.create({
     fontWeight: "bold",
   },
   content: {
-    fontStyle: "italic",
-  },
-  image: {
-    width: 300,
-    height: 300,
-  },
+    backgroundColor:'orange',
+    padding: 25,
+    marginTop:15,
+    borderWidth:2,
+    borderColor:"black",
+    borderRadius:10,
+
+  }
+  
 });
