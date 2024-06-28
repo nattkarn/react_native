@@ -22,6 +22,19 @@ export const myStyle = StyleSheet.create({
     borderColor:"black",
     borderRadius:10,
 
+  },
+  input:{
+    borderBottomColor:'#ddd',
+    borderBottomWidth:1,
+    paddingHorizontal:8,
+    paddingVertical:6,
+    marginBottom:15,
+    fontSize:15
+    
+
+  },
+  inputButton:{
+
   }
   
 });

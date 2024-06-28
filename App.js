@@ -2,6 +2,10 @@ import { View, FlatList, Text } from "react-native";
 import { myStyle } from "./styles/myStyle";
 import Person from "./components/Persons";
 import { useState } from "react";
+import AddForm from "./components/AddForm";
+
+
+
 
 export default function App() {
   const [data, setData] = useState([
@@ -29,6 +33,7 @@ export default function App() {
         ListEmptyComponent={<Text style={{alignSelf: "center", fontSize: 20, marginTop: 30}}>ไม่มีข้อมูล</Text>
         }
       />
+      <AddForm/>
     </View>
   );
 }
