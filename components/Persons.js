@@ -1,7 +1,7 @@
 import { View, Text } from "react-native"
 import { myStyle } from "../styles/myStyle"
 
-export default function person(props) {
+export default function person({props}) {
     
     return (
         <View style={myStyle.content}>
