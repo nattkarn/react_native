@@ -21,6 +21,12 @@ export default function App() {
     
   }
 
+  const insertData=(name, age) => {
+    console.log("🚀 ~ insertData ~ age:", age)
+    console.log("🚀 ~ insertData ~ name:", name)
+
+  }
+
   return (
     <View style={myStyle.container}>
       <FlatList
@@ -33,7 +39,7 @@ export default function App() {
         ListEmptyComponent={<Text style={{alignSelf: "center", fontSize: 20, marginTop: 30}}>ไม่มีข้อมูล</Text>
         }
       />
-      <AddForm/>
+      <AddForm insertData={insertData}/>
     </View>
   );
 }
