@@ -1,4 +1,4 @@
-import { View, FlatList, Text } from "react-native";
+import { View, FlatList, Text, Alert } from "react-native";
 import { myStyle } from "./styles/myStyle";
 import Person from "./components/Persons";
 import { useState } from "react";
@@ -22,8 +22,22 @@ export default function App() {
   }
 
   const insertData=(name, age) => {
-    console.log("🚀 ~ insertData ~ age:", age)
-    console.log("🚀 ~ insertData ~ name:", name)
+    if(name){
+      setData((prevData)=>{
+        return[
+          {id:Math.random().toString(),name,age},
+          ...prevData
+        ]
+      })
+    }else{
+      Alert.alert('กรุณาป้อนชื่อ')
+    }
+
+    if(age){
+
+    }else{
+      Alert.alert('กรุณาป้อนชื่อ')
+    }
 
   }
 
