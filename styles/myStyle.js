@@ -21,6 +21,8 @@ export const myStyle = StyleSheet.create({
     borderWidth:2,
     borderColor:"black",
     borderRadius:10,
+    flexDirection:'row',
+    justifyContent:'space-between'
 
   },
   input:{
