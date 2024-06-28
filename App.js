@@ -10,35 +10,23 @@ export default function App() {
     { id: 3, name: "Nattkarn3", age: 29 },
   ]);
 
+  const deleteData=(id) => {
+    setData((prevData)=> {
+      return prevData.filter((item)=>item.id != id)
+    })
+    
+  }
+
   return (
     <View style={myStyle.container}>
       <FlatList
         data={data}
-        renderItem={({ item }) => <Person props={item} />}
+        renderItem={({ item }) => <Person props={item} deleteData={deleteData} />}
         keyExtractor={(item) => item.id}
-        ListHeaderComponent={
-          <Text
-            style={{
-              alignSelf: "center",
-              fontSize: 25,
-              marginTop: 10,
-              fontWeight: "bold",
-            }}
-          >
-            ข้อมูลประชากร
-          </Text>
+        ListHeaderComponent={<Text style={{alignSelf: "center", fontSize: 25, marginTop: 10, fontWeight: "bold"}}>ข้อมูลประชากร</Text>
         }
         // If Data is Empty
-        ListEmptyComponent={
-          <Text
-            style={{
-              alignSelf: "center",
-              fontSize: 20,
-              marginTop: 30,
-            }}
-          >
-            ไม่มีข้อมูล
-          </Text>
+        ListEmptyComponent={<Text style={{alignSelf: "center", fontSize: 20, marginTop: 30}}>ไม่มีข้อมูล</Text>
         }
       />
     </View>

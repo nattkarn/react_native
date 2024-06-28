@@ -1,11 +1,16 @@
 import { View, Text } from "react-native"
 import { myStyle } from "../styles/myStyle"
+import { TouchableOpacity } from "react-native"
 
-export default function person({props}) {
+export default function person({props, deleteData}) {
     
     return (
-        <View style={myStyle.content}>
-            <Text style={myStyle.header }> Name: {props.name } | age: {props.age}</Text>
-        </View>
+        <TouchableOpacity onPress={() => {
+            deleteData(props.id)
+        }}>
+            <View style={myStyle.content}>
+                <Text style={myStyle.header }> Name: {props.name } | age: {props.age}</Text>
+            </View>
+        </TouchableOpacity>
     )
 }
